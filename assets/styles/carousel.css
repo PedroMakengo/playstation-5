@@ -4,13 +4,13 @@
   /* overflow: hidden; */
 }
 
-#carousel div {
+#carousel > div {
   position: absolute;
   transition: transform 0.4s, left 0.4s, opacity 0.4s, z-index 0s;
   opacity: 1;
 }
 
-#carousel div img {
+#carousel div section img {
   width: 175px;
   border-radius: 30px;
   transition: width 0.4s;
@@ -56,9 +56,15 @@
 #carousel div.selected {
   z-index: 1;
   left: 215px;
+  height: 90%;
+  width: 75%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-#carousel div.selected img {
+#carousel div.selected section img {
   width: 175px;
   border: 3px solid transparent;
   box-shadow: 0px 0px 10px rgb(216, 216, 216);
@@ -91,6 +97,52 @@
   bottom: 40px;
 }
 
-#carousel :not(.selected) section span {
+#carousel :not(.selected) section span,
+#carousel :not(.selected) .game-info {
   display: none;
+}
+
+#carousel .selected .game-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+#carousel .selected .game-info .left h1 {
+  color: white;
+  font-weight: 300;
+  font-size: 1.5em;
+  margin: 15px 0 15px 0;
+}
+
+#carousel .selected .game-info .left .button-left {
+  display: flex;
+}
+
+#carousel .selected .game-info .left .button-left a {
+  background-color: rgba(255, 255, 255, 0.089);
+  color: white;
+  font-size: 1.5em;
+  margin-right: 10px;
+  border-radius: 50px;
+}
+
+#carousel .selected .game-info .left .button-left a:nth-child(1) {
+  padding: 10px 120px;
+}
+
+#carousel .selected .game-info .left .button-left a:nth-child(2) {
+  /* display: block; */
+  height: 65px;
+  width: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#carousel .selected .game-info .right .cover {
+  width: 200px;
+  height: 200px;
+  background-image: url(../images/game-thumbnail-dirt-5.png);
+  background-size: cover;
 }

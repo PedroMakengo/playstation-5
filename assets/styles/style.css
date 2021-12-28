@@ -11,6 +11,7 @@ body {
   font-family: Poppins;
   background-size: cover;
   background-image: url(../images/bg-dirt-5.png);
+  overflow: hidden;
 }
 
 body::before {
