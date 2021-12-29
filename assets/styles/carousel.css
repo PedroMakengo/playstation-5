@@ -148,6 +148,7 @@
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
+  z-index: 0;
 }
 
 #carousel .selected .game-info .right .cover::before {
@@ -156,6 +157,42 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(to bottom, transparent 45%, #000);
+  z-index: 0;
+}
+
+#carousel .selected .game-info .right .cover span {
+  z-index: 1;
+  font-size: 13px;
+}
+
+#carousel .selected .game-info .right .cover span.complet {
+  color: white;
+  border: 2px solid white;
+  width: fit-content;
+  padding: 2px 8px;
+  margin-left: 15px;
+}
+
+#carousel .selected .game-info .right .cover span.update {
+  background: white;
+  width: fit-content;
+  color: #000;
+  font-weight: 700;
+  margin: 17px 0 17px 17px;
+  padding: 2px;
+  font-size: 0.8em;
+}
+
+#carousel .selected#sackboy-game .right .cover {
+  background-image: url(../images/game-thumbnail-sackboy.png);
+}
+
+#carousel .selected#spiderman-game .right .cover {
+  background-image: url(../images/game-thumbnail-spider-man.png);
+}
+
+#carousel .selected#demon-game .right .cover {
+  background-image: url(../images/game-thumbnail-demons-souls.png);
 }
 
 #carousel .selected#dirt-game .right .cover {
@@ -168,4 +205,12 @@
 
 #carousel .selected#yakuza-game .right .cover {
   background-image: url(../images/game-thumbnail-yakuza.png);
+}
+
+#carousel .selected#xiii-game .right .cover {
+  background-image: url(../images/game-thumbnail-XIII.png);
+}
+
+#carousel .selected#watch-dogs-game .right .cover {
+  background-image: url(../images/game-thumbnail-watch-dogs.png);
 }
